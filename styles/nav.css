@@ -1,0 +1,163 @@
+body {
+    margin: 0px;
+    font-family: "Source Code Pro", sans-serif;
+}
+
+/* Contenedor menu navegacion */
+.menu-wrapper{
+    width: 100%;
+    height: 85px;
+    background-color:  #000000; /* #222427;*/
+    margin-top: 0px;
+    font-weight: 900;
+    color: white;
+    display: grid;
+     grid-template-columns: 20% 30% 20% 30%;
+    
+
+    
+    
+}
+
+ .menu-wrapper > .left-column {
+    display: flex;
+    align-items: center;
+    width: 245px;
+}
+
+
+.menu-wrapper > .left-column  img {
+    height: 50%;
+    width: 210px;
+    margin-left: 60px;
+
+}
+
+/* Menu Links */
+.menu-wrapper > .center-column {
+    display: grid;
+    gap: 0px;
+    align-items: end;
+    align-content: end;
+    width: 500px;
+    margin-bottom: 15px;
+    font-size:  1.4rem;
+}
+
+.menu-wrapper > .center-column > .nav-explore {
+    margin-left: 13px;
+    color: #cea135;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 500;
+    
+}
+
+
+.menu-wrapper > .center-column > .nav-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+
+
+
+.menu-wrapper > .center-column > .nav-nav >.nav-item a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+
+.menu-wrapper > .center-column > .nav-nav > .nav-item a:hover{
+    text-decoration: none;
+    color: #50c884;
+    
+}
+
+/* Spark list button  */
+
+.menu-wrapper > .list-column {
+    display :flex;
+    align-items: end;
+    width: auto;
+}
+
+.menu-wrapper > .list-column > .menu-list {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.menu-wrapper > .list-column > .menu-list a {
+    text-decoration: none;
+    color: #c5c9ce;
+}
+
+.menu-wrapper > .list-column > .menu-list a:hover {
+    text-decoration: none;
+    color: #50c884;
+}
+
+/* Button Menu */
+.right-column {
+    display: grid;
+    gap: 0px;
+    align-items: end;
+    align-content: end;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+   
+}
+.right-column > .menu-btn > .btn-lst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
+
+.btn{
+    background-color:#666666;
+    color: white;
+    font-size: 1.4rem;
+    padding: 10px 25px;
+    border: 1px none#666666; /* si no pones borde, algunos navegadores lo ponen por ti*/
+    border-radius: 3px;
+    outline: none; /* elimina el contorno que rodea al boton*/
+    transition: 0.35s;
+    cursor: pointer;
+    height: 55px;
+    width: 150px;
+}
+
+
+/*Colorea el boton al pulsarlo (estado active)*/
+.btn:active {
+    opacity: 0.5;
+}
+
+.btn:hover {
+    
+    opacity: 0.5;
+}
+
+.right-column > .menu-btn > .btn-lst > .btn-item a{
+        display: inline-block; 
+        text-decoration: none; /* Elimina el subrayado */
+        color: white; /* Mantiene el color del texto */
+        font-size: 1.6rem;
+}
+
+.right-column > .menu-btn > .btn-lst > .btn-item a:hover{
+    opacity: 0.5;
+}
+
+    
+
+#chevron{
+    color: #50c884;
+}
+
+
