@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal de CodePen</title>
+
+    <!-- Importa la fuente Source Code Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+    <!-- Fuente Source Sans 3 -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,900;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <!-- Fuente Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,900;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+    <!-- Font Awensom icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/common.css">   
+    <link rel="stylesheet" href="styles/main.css">   
+
+</head>
+<body>
+    <!-- Menu Navegacion -->
+    <div class="menu-wrapper">
+
+        <div class="left-column">
+            <img src="images/logo.png">
+        </div>
+
+        <div class="center-column">    
+            <div class="nav-explore">  
+                 Explore
+            </div> 
+                    
+            <div class="nav-nav">
+                <div class="nav-item">   
+                     <a href="#">Pens</a>   
+                </div>
+
+                <div class="nav-item">
+                     <a href="#">Projects</a>    
+                </div>
+
+                <div class="nav-item">
+                     <a href="#">Posts</a>  
+                </div>
+
+                <div class="nav-item">
+                     <a href="#">Collections</a>  
+                 </div>
+                      
+            </div>
+           
+        </div>
+
+        <div class="list-column">
+                <div class="menu-list">
+                    <a href="#">Spark
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+        </div>
+              
+        <div class="right-column"> 
+            <div class="menu-btn"> 
+                <div class="btn-lst">
+                    <div class="btn-item">
+                        <button type="submit" class="btn"> Create<i class="fa-solid fa-chevron-down" id="chevron"></i></button>
+                    </div>
+
+                    <div class="btn-item">
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+                    <div class="btn-item">
+                        <button type="submit" class="btn"> Log In</button>
+                    </div>
+                    
+                    <div class="btn-item">
+                        <button type="submit" class="btn"> Sign Up</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Main Page -->
+     <div class="main-wrapper">
+
+        <div class="main-left-wrapper">
+
+            <div class="text-up">
+                  <span> CodePen is a <span class="social">social development <br>
+                   enviroment</span> for front-end designers<br>
+                    and developers <i class="fa-regular fa-hand-spock"></i></span>
+            </div>
+
+            <div class="text-down">
+                <span>It`s the best place to build and deploy a <br>
+                      website, show off your work, build test cases, <br> 
+                      and find inspiration.</span>
+            </div>
+
+            <div class="text-btn">
+                <div class="btn-wrapper">
+                    <div class="btn-txt-rt">
+                      <button type="submit" class="btn-sign"> Sign Up for Free</button>
+                     </div>
+                
+                    <div class="text-btn-lf">
+                        <button type="submit" class="btn-learn">Learn More</button>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="main-right-wrapper">
+           <div class="right-wrapper">
+                <div class="right-text">
+                    <span class="img-text">This is<span id="txt-codepen"> CodePen Projects </span>!</span>
+                </div>
+                
+                <div class="right-image">
+                    
+                         <img src="images/codigo.png" alt="CodePen" >
+                </div>
+           </div>
+        </div>
+    </div>
+
+     <!-- Footer-->
+    <div class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-text">
+                <span>CodePen for <span class="foot-up">TEAMS</span></span>
+           </div>
+
+            <div class="footer-text">
+                <span>CodePen for <span class="foot-up">EDUCATION</span></span>
+            </div>
+
+            <div class="footer-text">
+                <span>CodePen for <span class="foot-up">PRIVACY</span></span>
+            </div>
+
+            <div class="footer-text">
+                <span>CodePen for <span class="foot-up">WRITING</span></span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
