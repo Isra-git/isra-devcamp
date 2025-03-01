@@ -1,0 +1,161 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #73dab2;
+}
+
+.flex {
+    margin: 10px;
+}
+
+/* ejercicio 1 */
+.flexOne {
+    display:flex;
+}
+
+.flexOne  .square{
+    margin:5px;
+}
+
+/* Ejercicio 2 */
+.flexTwo {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexTwo .square{
+    margin: 2px;
+}
+
+/* Ejercicio 3 */
+.flexThree {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.flexThree .square {
+    margin: 2px;
+}
+
+/* Ejercicio 4 */
+.flexFour {
+    display: flex;
+    flex-flow: wrap;
+    width: 350px;
+}
+
+.flexFour .square {
+   
+    background:  #3d8b6d;
+    margin:5px;
+}
+
+/* Ejercicio 5 */
+.flexFive {
+    display: flex;
+    width: 350px;
+}
+
+.flexFive .item {
+    background: #0b6643;
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+}
+
+#grow {
+    flex-grow: 2;
+}
+
+/* Ejercicio 6 */
+.flexSix {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    flex-direction: column;
+    background:  #f1f1f1;
+}
+
+.flexSix .one, .two, .three{
+    display: flex;
+}
+
+.flexSix .one {
+    justify-content: space-around;
+}
+.flexSix .two {
+    justify-content: space-between;
+    margin: 50px 0px;
+    background:  #d6d6d6;
+}
+.flexSix .three {
+    justify-content: space-evenly;
+}
+
+/* Ejercicio 7 */
+.flexSeven {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    width: 500px;
+}
+.flexSeven .one, .flexSeven .two, .flexSeven .three, .flexSeven .four {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexSeven .one {
+    justify-content: center;
+}
+
+.flexSeven .two {
+    justify-content: flex-end;
+}
+
+.flexSeven .three {
+    justify-content: flex-start;
+}
+
+.flexSeven .four {
+    justify-content: space-between;
+}
+
+/* Ejercicio 8 */
+.flexEight {
+    display: flex;
+    height: 400px;
+    width: 300px;
+    background-color: #eeeeee;
+}
+
+.flexEight .one, .flexEight .two, .flexEight .three{
+    display: flex;
+}
+
+.flexEight .one {
+    align-items: center;
+}
+
+.flexEight .two {
+    align-items: flex-end;
+}
+
+.flexEight .three {
+    align-items: flex-start;
+}
+
+/* Ejercicio 9 */
+.flexNine {
+    display: flex;
+    width: 450px;
+    height: 250px;
+    background-color: #eeeeee;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.flexNine #special {
+    align-self: flex-end;
+}
+    
