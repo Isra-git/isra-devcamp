@@ -38,7 +38,7 @@ for indice in tranformed_list:
 #7
 primera_palabra = string.split()[0].upper()
 print (f'La primera palabra de {string} es: {primera_palabra}')
-palabra_completa = string + ' '+primera_palabra
+palabra_completa = primera_palabra + string[len(primera_palabra):]
 print(palabra_completa)
 
 #8
