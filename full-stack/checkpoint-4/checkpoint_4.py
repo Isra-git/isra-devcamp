@@ -56,5 +56,5 @@ print(f'El resultado de la lista ordenada alfabeticamente es:\n{lista}')
 
 
 #Exercise 9: Use reassignment to add an element to your tuple.
-tupla = tupla + ('tupla5',)
+tupla += ('tupla5',)
 print(f'El contenido de tupla ahora es:\n {tupla}')
