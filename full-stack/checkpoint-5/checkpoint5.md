@@ -9,6 +9,8 @@
   
 > - **else**: *[codigo]* --> Se ejecutara si la sentencia **no** se cumple
 
+# ![sentencia if](sentencia_if.gif)
+
 ### 2. Se puede comprobar mas de una condicion dentro de un bloque condicional, a traves de la sentencia **elif** :
 > - **if** *[sentencia_1]: [codigo]* --> Se ejecutara el codigo **si** la sentencia se cumple. 
 > - **elif** *[sentencia_2]: [codigo]* --> Se ejecutara el codigo **si** la segunda sentencia se cumple. 
@@ -39,11 +41,29 @@ if not llueve:
     print("Puedes salir sin paraguas.")
 
 ```
+### 4. Que es una sentencia If **anidada?**
+Cuando **dentro** de un bloque **if**, nos encontramos con otra sentencia **if**, se trata de uma ***sentencia if anidada***, esto permite establecer varias condiciones para una mismo flujo.   
+Por ejemplo, si queremos comprobar si una persona tiene la edad requeria y esta invitada a un evento:
+``` python
+edad = int(input("Ingrese su edad: "))
+tiene_invitacion = input("¿Tienes invitación? (sí/no): ").lower()
 
+if edad >= 18:
+    if tiene_invitacion == "sí":
+        print("¡Bienvenido al evento VIP!")
+    else:
+        print("Necesitas una invitación para entrar.")
+else:
+    print("Lo siento, debes ser mayor de edad para entrar.")
+
+```
+#### Puedes anidar tantas condiciones if como quieras,, pero cada una de reduce la optimización del programa y lo hace **más complejo de leer y entender**. Por lo tanto, es mejor **reducir a lo minimo necesario** el número de anidaciones.
+![sentencia if](anidada_if.jpeg)
 ---
 
 ## **¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?**[![Mi imagen](pregunta.png)](https://docs.python.org/es/3.13/tutorial/controlflow.html#for-statements)
-
+### En Python, el **bucle for se utiliza para iterar** (repetir un proceso varias veces) **sobre** los elementos de un **objeto iterable** (como una lista, tupla, conjunto, o diccionario). Ejecuta un bloque de código una vez para cada elemento del iterable, permitiendo procesar los elementos de **forma secuencial**. 
+### Los bucles son importantes ya que te ayudan a ejecutar un **bloque de código repetidamente**. 
 ### Existen dos tipos de bucles en python:  ***for*** y  ***while*** 
 ### Ambas tienen diferencias clave en la manera de funcionar y de utilizarse.
 >  ***for*** :  
@@ -56,6 +76,14 @@ if not llueve:
 >      print(i)        # Muestra el numero
 >   ```
 
+# <center> ![for](bucle_for.png)</center>
+### **Iterables e iteradores**
+Para entender al cien por cien los **bucles for**, y como Python fue diseñado como lenguaje de programación, es muy importante entender los conceptos de iterables e iteradores. Empecemos con un par de definiciones:
+•	**Los iterables son** aquellos **objetos** que como su nombre indica pueden ser iterados, lo que dicho de otra forma es, **que puedan ser indexados**.  
+
+•	**Los iteradores son objetos que hacen referencia a un elemento**, y que **tienen un método next()** que permite hacer **referencia al siguiente**.
+los iterables son objetos que pueden ser iterados o accedidos con un índice. Algunos ejemplos de iterables en Python son las listas, tuplas, cadenas o diccionarios. Sabiendo esto, lo primero que tenemos que tener claro es que en un ***for, lo que va después del *in* deberá ser siempre un iterable***  
+
 
 
 >  ***while*** :
@@ -67,21 +95,33 @@ if not llueve:
 >while contador < 5:  # Se ejecuta mientras contador sea menor que 5
 >    print(contador)
 >    contador += 1  # Incremento para evitar un bucle infinito
-
+### El uso del **while** nos permite **ejecutar una sección de código repetidas veces**, de ahí su nombre. El código se ejecutará mientras una condición determinada se cumpla. Cuando se deje de cumplir, se saldrá del bucle y se continuará la ejecución normal. 
+# <center> ![while](bucle_while.png)</center>
+### Existe dos tipos de bucles, los que tienen un **número de iteraciones no definidas**, y los que tienen un número de iteraciones definidas. El **while** estaría dentro del primer tipo
+> Un **mal** uso del **while** puede dar lugar a **bucles infinitos** y problemas. Aunque en algún caso tal vez nos interese tener un bucle infinito, pero salvo que estemos seguros de lo que estamos haciendo, hay que tener cuidado
 ---
 ## **¿Qué es una lista por comprensión en Python?**[![Mi imagen](pregunta.png)](https://docs.python.org/es/3.13/tutorial/datastructures.html#list-comprehensions)
 ### Las listas por comprension son una manera concisa y eficiente que tiene python para generar listas.
 ### Su principal caracteristica es que se generan utilizando **solamente una linea de codigo** y no necesitan ningun bucle for para ello.
 ### Su sintaxis es la siguiente:
 > *nueva_lista = [expresión **for** elemento **in** iterable]*
-### Mejoran la **legibilidad** del codigo y su **rendimiento**.
-### Un ejemplo sencillo, para generar una lista de los cuadrados de una lista de numeros, utilizando **listas por comprension**..
+### Por un lado tenemos el **for** elemento **in** iterable, que itera un determinado iterable y “guarda” cada uno de los elementos en '**nueva_lista**'. Por otro lado, tenemos la expresión, que es lo que será añadido a la lista en cada iteración.   
 ``` python
 numeros = [1, 2, 3, 4, 5]
 cuadrados = [n**2 for n in numeros]
 print(cuadrados)  # Salida: [1, 4, 9, 16, 25]
 
 ```
+### La **expresión** también puede ser una **llamada a una función**. Se podría escribir el ejemplo anterior del cálculo de cuadrados de la siguiente manera.
+``` python
+def cuadrado(i):
+    return i**2
+cuadrados = [cuadrado(i) for i in range(5)]
+# [0, 1, 4, 9, 16]
+```
+### Mejoran la **legibilidad** del codigo y su **rendimiento**.
+### Un ejemplo sencillo, para generar una lista de los cuadrados de una lista de numeros, utilizando **listas por comprension**..
+
 ### El mismo ejemplo utilizando **bucle** for ..
 ``` python
 numeros = [1, 2, 3, 4, 5]
@@ -133,6 +173,19 @@ def saludar(nombre, edad):
 saludar(edad=22, nombre="Carlos")  # Salida: Hola Carlos, tienes 22 años.
 
 ```
+> Al indicar en la llamada a la función el **nombre de la variable** y el valor, **el orden ya no importa**  
+### Si indicamos un argumento que no ha sido definido como parámetro de entrada, tendremos un error, de tipo:
+``` python
+Unexpected keyword argument
+```
+### Argumentos por defecto
+A veces necesitamos tener una función con algún **parámetro opcional**, que pueda ser usado o no dependiendo de diferentes **circunstancias**. Lo que podemos hacer es ***asignar un valor por defecto a la función***. En el siguiente caso ***c*** valdría cero salvo que se indique lo contrario.
+``` python
+def suma(a, b, c=0):
+    return a+b+c
+suma(5,5,3) # 13
+```
+
 ### Los argumentos de **longitud variable**:*args, **kwargs
 Permiten pasar un número indefinido de argumentos posicionales.
 - *args:  Devuelve una tupla con los argumentos
@@ -180,6 +233,36 @@ numeros = [1, 2, 3, 4, 5, 6]
 pares = list(filter(lambda x: x % 2 == 0, numeros))
 print(pares)  # Salida: [2, 4, 6]
 ```
+
+### Una función lambda puede ser la entrada a una función normal.
+``` python
+def mi_funcion(lambda_func):
+    return lambda_func(2,4)
+mi_funcion(lambda a, b: a + b)
+```
+### Y una función normal también puede ser la entrada de una función lambda. 
+``` python
+def mi_otra_funcion(a, b):
+    return a + b
+
+(lambda a, b: mi_otra_funcion(a, b))(2, 4)
+```
+### Es posible tener argumentos con valor asignado por defecto.
+``` python
+(lambda a, b, c=3: a + b + c)(1, 2) # 6
+```
+### También se pueden pasar los parámetros indicando su nombre.
+``` python
+(lambda a, b, c: a + b + c)(a=1, b=2, c=3) # 6
+```
+### Al igual que en las funciones se puede tener un número variable de argumentos haciendo uso de *, lo conocido como tuple unpacking.
+``` python
+(lambda *args: sum(args))(1, 2, 3) # 6
+```
+### Y si tenemos los parámetros de entrada almacenados en forma de key y value como si fuera un diccionario, también es posible llamar a la función.
+``` python
+(lambda **kwargs: sum(kwargs.values()))(a=1, b=2, c=3) # 6
+``` 
 ### **Las funciones lambda solo pueden contener expresiones, por lo que no puedes incluir ``` print, while, for, return ```, etc..**
 
 ---
