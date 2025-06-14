@@ -1,6 +1,6 @@
 # <mark> CHECKPOINT 6</mark>
 
-# 1) **¿Para qué usamos Clases en Python?**
+# 1) **¿Para qué usamos Clases en Python?**<img title="" src="ICONO.png" alt="" width="50">
 
 ### ¿Qué es una clase?
 
@@ -117,7 +117,7 @@ Las **clases** nos sirven **para poder llevar a un plano abstracto** o imaginari
 
 ---
 
-# 2) ¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?
+# 2) ¿Qué método se ejecuta Automáticamente cuando se crea una instancia de una clase? <img title="" src="ICONO.png" alt="" width="50">
 
 El método que se ejecuta automáticamente al crear una instancia de una clase es el **método especial** **__init__()**.
 
@@ -277,7 +277,7 @@ c2 = Circulo(10)  # Salida: Objeto creado con radio 10 y área 314.16
 
 ---
 
-# **3) ¿Cuáles son los tres verbos principales de una API?**
+# **3) ¿Cuáles son los tres verbos principales de una API?** <img title="" src="ICONO.png" alt="" width="50">
 
 Las **APIs** REST (Representational State Transfer) utilizan **métodos HTTP** para permitir la comunicación entre clientes y servidores. Entre estos métodos, <u>hay tres fundamentales </u>que representan las acciones básicas en la manipulación de datos: **GET, POST y DELETE**. A continuación, exploraremos cada uno en detalle.
 
@@ -367,7 +367,7 @@ Los métodos GET, POST y DELETE <u> constituyen la **base del funcionamiento** d
 
 # 
 
-# **4) ¿Qué es una API?**
+# **4) ¿Qué es una API?** <img title="" src="ICONO.png" alt="" width="50">
 
 Una **API** (*Application Programming Interface*, en español **Interfaz de Programación de Aplicaciones**) es un conjunto de reglas y mecanismos que permite que diferentes programas o sistemas se comuniquen entre sí. En esencia, actúa como un puente (conexion) entre aplicaciones, facilitando el intercambio de información y funcionalidades sin necesidad de conocer los detalles internos de cómo están implementadas. Es decir, añade una capa de abstracciòn entre las aplicaciones, permitiendo centrarse mayormente en la lògica de programaciòn.
 
@@ -464,7 +464,7 @@ Ejemplo de cómo funciona una solicitud API:
 
 ---
 
-# 5) **¿Qué es Postman?**
+# 5) **¿Qué es Postman?** <img title="" src="ICONO.png" alt="" width="50">
 
 **Postman** es una herramienta gráfica diseñada para **probar, desarrollar y documentar APIs**. Permite a los desarrolladores enviar solicitudes HTTP, inspeccionar respuestas y automatizar pruebas sin necesidad de escribir código desde cero.
 
@@ -589,7 +589,7 @@ Postman es una **herramienta esencial** para cualquier desarrollador que trabaja
 
 ---
 
-# 6)**¿Qué es el polimorfismo?**
+# 6)**¿Qué es el polimorfismo?**  <img title="" src="ICONO.png" alt="" width="50">
 
 El **polimorfismo** es un principio fundamental de la programación orientada a objetos (POO) que permite que **diferentes clases compartan un mismo método**, pero cada una **lo implemente de manera distinta**. Esto permite escribir código más flexible y reutilizable.
 
@@ -760,7 +760,7 @@ Aprender y aplicar el polimorfismo correctamente es fundamental para escribir so
 
 ---
 
-# 7) ¿Qué es un método dunder?
+# 7) ¿Qué es un método dunder? <img title="" src="ICONO.png" alt="" width="50">
 
 Los **métodos dunder** (abreviación de *"double underscore"*, doble guión bajo) son métodos especiales que Python reconoce automáticamente. Se escriben con doble guión bajo al inicio y al final, como `__init__`, `__str__`, `__len__`, etc.
 
@@ -909,7 +909,7 @@ Los **métodos dunder** son esenciales en la programación orientada a objetos e
 
 ---
 
-# 8) ¿Qué es un decorador en Python?
+# 8) ¿Qué es un decorador en Python?  <img title="" src="ICONO.png" alt="" width="50">
 
 Los decoradores en Python son una herramienta que ***permite modificar el comportamiento de una función sin alterar su código original***. Son ampliamente utilizados para añadir funcionalidades como logging, validaciones, caching y más.
 
