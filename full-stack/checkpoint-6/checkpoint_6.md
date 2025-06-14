@@ -460,7 +460,7 @@ Ejemplo de cómo funciona una solicitud API:
 
 **Diagrama de flujo de una API:**
 
-![](C:\Users\villa\Desktop\html-css\Full-stack\Proyectos\Ejercicios\checkpoint_6\api.png)
+![](api.png)
 
 ---
 
@@ -470,7 +470,7 @@ Ejemplo de cómo funciona una solicitud API:
 
 Postman es especialmente útil para **verificar el comportamiento de una API** antes de integrarla en una aplicación,<u> asegurando que los endpoints funcionen </u>correctamente y que <u>los datos se envíen y reciban en el formato adecuado.</u>
 
-![](C:\Users\villa\Desktop\html-css\Full-stack\Proyectos\Ejercicios\checkpoint_6\postman1.svg)
+![](postman1.svg)
 
 ## **¿Por qué se usa Postman?**
 
@@ -581,7 +581,7 @@ pm.test("El estado de la respuesta es 200", function () {
 });
 ```
 
-![](C:\Users\villa\Desktop\html-css\Full-stack\Proyectos\Ejercicios\checkpoint_6\postman2.svg)
+![](postman2.svg)
 
 ## **Conclusión**
 
@@ -754,7 +754,7 @@ El polimorfismo aporta grandes ventajas al desarrollo de software:
 
 El polimorfismo es una<u> técnica clave en la programación orientada a objetos.</u> Permite **usar el mismo método en diferentes clases**, haciendo que el código sea más flexible y reutilizable. A través de herencia, clases abstractas y funciones polimórficas, podemos crear sistemas escalables y eficientes.
 
-![](C:\Users\villa\Desktop\html-css\Full-stack\Proyectos\Ejercicios\checkpoint_6\poli.jpeg)
+![](poli.jpeg)
 
 Aprender y aplicar el polimorfismo correctamente es fundamental para escribir software limpio, estructurado y fácil de mantener.
 
@@ -768,7 +768,7 @@ Estos métodos permiten definir **comportamientos específicos** en una clase, c
 
 Los métodos dunder son fundamentales en la **Programación Orientada a Objetos (POO)** en Python y facilitan la personalización del comportamiento de los objetos de una clase.
 
-![](C:\Users\villa\Desktop\html-css\Full-stack\Proyectos\Ejercicios\checkpoint_6\dunder.png)
+![](dunder.png)
 
 ## **Características principales de los métodos dunder**
 
@@ -940,7 +940,7 @@ Hola, mundo!
 Después de ejecutar la función
 ```
 
-![](C:\Users\villa\Desktop\html-css\Full-stack\Proyectos\Ejercicios\checkpoint_6\decorador.png)
+![](decorador.png)
 
 ### b) Decoradores con parámetros
 
