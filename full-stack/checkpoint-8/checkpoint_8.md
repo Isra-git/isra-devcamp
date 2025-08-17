@@ -10,7 +10,7 @@
 6. Programación orientada a objetos (POO)
 7. Promesas en JavaScript
 8. `async` y `await`
-9. Ejercicio práctico
+9. 
 
 ---
 
@@ -565,8 +565,6 @@ sumar(1, 2, 3, 4); // 10
 
 La idea es **modelar cosas del mundo real** (como usuarios, autos, productos) en forma de objetos que interactúan entre sí.
 
-
-
 ![](poo.png)
 
 ## 
@@ -726,8 +724,6 @@ obtenerUsuario().then(usuario => {
 
 ➡️ `setTimeout` simula una espera como si fuera una llamada a una API.
 
- 
-
 ## 🚀 Promesas con `async/await`
 
 ```js
@@ -744,8 +740,6 @@ async function mostrarUsuario() {
 ➡️ `await` pausa la función hasta que la promesa se resuelva.  
 Más limpio que usar `.then()` y `.catch()`.
 
-
-
 ## 🎯 ¿Para qué sirven las promesas?
 
 - Llamadas a APIs (fetch, axios)
@@ -753,8 +747,6 @@ Más limpio que usar `.then()` y `.catch()`.
 - Timers y delays
 - Cargas de datos en apps web
 - Procesos que tardan (como animaciones o cálculos)
-
-
 
 ## 🧙‍♂️ Trucos y buenas prácticas
 
@@ -770,8 +762,6 @@ Más limpio que usar `.then()` y `.catch()`.
   Promise.all([promesa1, promesa2]).then(([res1, res2]) => { ... });
   ```
 
-
-
 ## ⚠️ Errores comunes
 
 | Error                                                | Cómo evitarlo                                       |
@@ -780,8 +770,6 @@ Más limpio que usar `.then()` y `.catch()`.
 | No manejar errores                                   | Siempre usa `.catch()` o `try/catch`                |
 | Mezclar `then` con `await`                           | Usa uno u otro, no los combines                     |
 | Usar `await` fuera de funciones `async`              | Solo puedes usar `await` dentro de `async function` |
-
-
 
 ## 📌 Resumen:
 
@@ -804,24 +792,16 @@ async function miFuncion() {
 
 ---
 
-
-
 ## <mark> async y await</mark>
-
-
 
 Sintaxis que simplifica el manejo de promesas como si fuesen código sincrónico.
 
 `async` y `await` son dos palabras mágicas que **simplifican el trabajo con promesas**.  
 Nos permiten escribir **código asincrónico** que parece **sincrónico**, lo que lo hace más fácil de leer, escribir y mantener.
 
-
-
 ## 🧠 ¿Qué significa "asincrónico"?
 
 Es cuando el código **no se ejecuta en orden inmediato**, sino que **espera** a que algo termine (como una llamada a una API, una lectura de archivo, etc.) sin bloquear el resto del programa.
-
-
 
 ## 🔧 ¿Qué hace `async`?
 
@@ -835,8 +815,6 @@ async function saludar() {
 
 saludar().then(msg => console.log(msg)); // "Hola"
 ```
-
-
 
 ## 🔧 ¿Qué hace `await`?
 
@@ -853,11 +831,7 @@ async function obtenerDatos() {
 
 ➡️ Parece código secuencial, pero está esperando sin bloquear.
 
-
-
 ## 🧪 Ejemplo real: sin `await` vs con `await`
-
-
 
 ### ❌ Con `.then()` (más difícil de leer)
 
@@ -867,8 +841,6 @@ fetch("https://api.com")
   .then(data => console.log(data))
   .catch(err => console.error(err));
 ```
-
-
 
 ### ✅ Con `async/await` (más limpio)
 
@@ -911,8 +883,6 @@ async function cargarDatos() {
 
 - ✅ Puedes usar funciones `async` dentro de `.map()` si devuelven promesas.
 
-
-
 ## ⚠️ Errores comunes
 
 | Error                                       | Cómo evitarlo                                  |
@@ -921,8 +891,6 @@ async function cargarDatos() {
 | Olvidar `try/catch`                         | Puede romper tu app si hay errores             |
 | Mezclar `.then()` con `await` sin necesidad | Elige uno u otro para mantener claridad        |
 | No esperar correctamente                    | Asegúrate de que lo que esperas es una promesa |
-
-
 
 ## 📌 Resumen :
 
@@ -942,11 +910,7 @@ async function miFuncion() {
 
 ---
 
-
-
 ### Enlaces que pueden interesarte:
-
-
 
 ## 📚 Enlaces útiles para aprender JavaScript en español
 
@@ -958,14 +922,10 @@ async function miFuncion() {
 - [Lenguaje JS - Manz.dev](https://lenguajejs.com/)  
   Guía extensa sobre JavaScript, DOM, eventos, asincronía, frameworks y más.
 
-
-
 ### 🛠️ Repositorios y recursos comunitarios
 
 - [Lista impresionante para aprender JavaScript en español (GitHub)](https://github.com/rosepac/aprender-javascript-en-espanol)  
   Recopilación de cursos, chuletas, videotutoriales y recursos interactivos.
-
-
 
 ### 🎥 Videotutoriales recomendados
 
@@ -975,8 +935,6 @@ async function miFuncion() {
 - [JavaScript para principiantes (Fazt Code)](https://www.youtube.com/watch?v=z95mZVUcJ-E)  
   Curso intensivo en una sola sesión, ideal para repasar o empezar.
 
-
-
 ### 🧪 Práctica y ejercicios
 
 - [Retos diarios en LenguajeJS](https://lenguajejs.com/challenges/)  
@@ -984,8 +942,6 @@ async function miFuncion() {
 
 - [Codewars (en español disponible)](https://www.codewars.com/)  
   Plataforma para resolver desafíos de programación con JavaScript.
-
-
 
 --- 
 
