@@ -72,15 +72,18 @@ class Restaurante {
       this.seleccion.push(plato);
     }
 
+    // Preguntamos por los extras (opcionales)
     const extra = this.pedirExtra();
     if (extra === null && confirm("¿Seguro que no quieres añadir ningún extra?") === false) {
       return this.cancelar();
     }
     if (extra) this.seleccion.push(extra);
 
+    // Mostramos la factura final
     this.mostrarFactura();
   }
 
+  //Pedimos la hora y comprobamos que es correcta
   pedirHora() {
     let hora;
     do {
@@ -91,6 +94,7 @@ class Restaurante {
     return hora;
   }
 
+  //Eliegimos el menu segun la hora
   obtenerTipoMenu(hora) {
     if (hora >= 6 && hora < 11) return "desayuno";
     if (hora >= 11 && hora < 17) return "comida";
@@ -98,6 +102,7 @@ class Restaurante {
     return null;
   }
 
+  // Pedimos la opcion del menu y comprobamos la entrada
   pedirOpcion(categoria, opciones) {
     const nombres = Object.keys(opciones);
     let entrada, nombreValido;
@@ -116,7 +121,7 @@ class Restaurante {
     this.mostrarMensajeAleatorio();
     return { nombre: nombreValido, precio: opciones[nombreValido] };
   }
-
+  // Preguntamos por los extras y comprobamos la entrada 
   pedirExtra() {
     const nombres = Object.keys(this.extras);
     let respuesta = prompt(
@@ -128,13 +133,13 @@ class Restaurante {
     respuesta = this.normalizarEntrada(respuesta);
     if (respuesta === "") return null;
     if (!nombres.map(n => this.normalizarEntrada(n)).includes(respuesta)) {
-      alert("Extra no válido. No se añadirá.");
+      alert("Extra no válido. No se añadira.");
       return null;
     }
     const nombreOriginal = nombres.find(n => this.normalizarEntrada(n) === respuesta);
     return { nombre: nombreOriginal, precio: this.extras[nombreOriginal] };
   }
-
+    // Mostramos la factura final con el total a pagar
   mostrarFactura() {
     let total = 0;
     let factura = "FACTURA:\n";
@@ -146,20 +151,24 @@ class Restaurante {
     alert(factura);
   }
 
+    // Mostramos un mensaje aleatorio del baul de mensajes
   mostrarMensajeAleatorio() {
     const mensaje = this.baulMensajes[Math.floor(Math.random() * this.baulMensajes.length)];
     alert(mensaje);
   }
-
+  //Eliminamos espacios y pasamos a minusculas para comparar
   normalizarEntrada(texto) {
     return texto.trim().toLowerCase();
   }
 
+  // Para Cuando se pulsa cancelar 
   cancelar() {
     alert("Has cancelado el pedido. Agur!");
   }
 }
 
-// Ejecutar el programa
+//Creamos una instancia del restaurante
 const restaurante = new Restaurante();
+
+// Ejecuta el programa
 restaurante.iniciar();
